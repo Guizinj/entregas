@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #f5f5f5, #d0ecd6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 40px;
+}
+
+img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 20px auto;
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+img:hover {
+    transform: rotate(3deg) scale(1.05); /* Um charme extra na foto */
+    
+}
+
+h1{
+    letter-spacing: 3.2px;
+    font-size: 15px;
+    line-height: 25px ;
+    text-align: center;
+    color: rgb(78, 78, 78);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(61, 61, 61);
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.des{
+    color:rgba(0, 99, 0, 0.678);
+}
+
+p{
+    text-align: justify;
+    color:rgb(99, 99, 99);
+    line-height: 18px;
+    letter-spacing: 1.0px;
+    font-size: 15px;
+}
+
+.chamada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.whats-button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(-45deg, #137236, #199446);
+    padding: 15px 55px;
+    border-radius: 15px;
+    margin: 20px 0px 35px 0px;
+
+    transition: background-color 0.5s ease, transform 0.5s, box-shadow 0.5s;
+}
+
+.whats-button:hover{
+    background-color: #199446cc;
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    
+}
+
+.whats-button:active {
+    transform: scale(0.95); 
+    transition: 0.1s;
+}
+
+h3{
+    text-align: start;
+    color:rgb(59, 59, 59);
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+li{
+    list-style: none;
+    color: rgb(56, 56, 56);
+    line-height: 22px;
+}
+
+ li > i{
+    width: 20px;
+    margin-right: 6px;
+    color:rgba(0, 99, 0, 0.678);
+}
+
+
+footer {
+    width: 100%;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.info-adicional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; 
+}
+
+.info-adicional h4 {
+    font-size: 13px;
+    color: #137236;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.info-adicional p {
+    font-size: 14px;
+    text-align: center; 
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.fidelidade {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.fidelidade-card {
+    background: linear-gradient(45deg, #137236, #199446);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 5 colunas */
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.slot {
+    aspect-ratio: 1/1;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.slot.check {
+    background: white;
+    color: #137236;
+    border-style: solid;
+}
+
+.slot.prize {
+    background: #ffd700;
+    color: #137236;
+    border-style: solid;
+}
+
+.card-footer {
+    font-size: 11px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.btn-instrucao {
+    display: inline-block;
+    background: none;
+    border: 1px solid #137236;
+    color: #137236;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.btn-instrucao:hover {
+    background: #137236;
+    color: white;
+}
+
+
+
+
+
+/* --- Estilos do Botão Flutuante do WhatsApp --- */
+.whatsapp-flutuante {
+    text-decoration: none;
+    color: white;
+    background:linear-gradient(-45deg, #199b49, #1cb152);
+    padding: 20px 25px;
+    border-radius: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 18px;
+
+    transition: transform 0.5s ease;
+    
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.whatsapp-flutuante:hover {
+    background-color: #128c7e; /* Verde mais escuro do WhatsApp */
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+}
+
+/* Efeito ao clicar (Active) */
+.whatsapp-flutuante:active {
+    transform: scale(0.95); /* Diminui levemente ao clicar */
+}
