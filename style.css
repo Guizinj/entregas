@@ -98,13 +98,13 @@ p{
     }
     50% {
         transform: scale(1.05); /* Aumenta 10% */
-        
+        }
 
     100% {
         transform: scale(1); /* Volta ao normal */
         
     }
-}}
+}
 
 
 .whats-button:active {
@@ -282,7 +282,7 @@ hr {
 /* Estado inicial: Invisível e um pouco abaixo da posição real */
 .reveal {
     opacity: 0;
-    transform: translateX(10px);
+    transform: translateX(5px);
     transition: all 0.8s ease-out;
 }
 
