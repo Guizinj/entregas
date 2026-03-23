@@ -80,6 +80,7 @@ p{
     margin: 20px 0px 35px 0px;
 
     transition: background-color 0.5s ease, transform 0.5s, box-shadow 0.5s;
+    animation: pulsar 2s infinite;
 }
 
 .whats-button:hover{
@@ -88,6 +89,23 @@ p{
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     
 }
+
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+       
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta 10% */
+        
+
+    100% {
+        transform: scale(1); /* Volta ao normal */
+        
+    }
+}}
+
 
 .whats-button:active {
     transform: scale(0.95); 
@@ -258,3 +276,20 @@ hr {
 .whatsapp-flutuante:active {
     transform: scale(0.95); /* Diminui levemente ao clicar */
 }
+
+
+
+/* Estado inicial: Invisível e um pouco abaixo da posição real */
+.reveal {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.8s ease-out;
+}
+
+/* Estado final: Quando o elemento entra na tela */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+

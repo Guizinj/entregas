@@ -10,13 +10,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-    <header>
+    <header class="reveal">
         <h1>PRAZER, MEU NOME É <span class="des">GUILHERME</span>, ENTREGADOR EM CARUARU E REGIÃO</h1>
         <div class="photo">
             <img src="gui.png" alt="entregador">
         </div>
     </header>
-    <main>
+    <main class="reveal">
         <section class="chamada">
             <h2>Entrega <span class="des">rápida</span> e <span class="des">segura</span> em Caruaru</h2>
             <p>Precisa enviar algo com urgência? Eu resolvo pra você! Atendimento rápido e de confiança, entrego em poucos minutos.</p>
@@ -36,7 +36,7 @@
     </main>
         <section class="fidelidade">
         <h3>CARTÃO FIDELIDADE</h3>
-        <div class="fidelidade-container">
+        <div class="fidelidade-container reveal">
             <div class ="fidelidade-card">
                 <div class="slots">
                     <div class="slot check"><i class="fa-solid fa-check"></i></div>
@@ -58,7 +58,7 @@
         </div>
         </section>
     <footer>
-    <div class="info-adicional">
+    <div class="info-adicional reveal">
         <div class="horarios">
             <h4><i class="fa-regular fa-clock"></i> ATENDIMENTO</h4>
             <p>Segunda a Sexta: 09h às 19h</p>
@@ -76,5 +76,29 @@
 <a href="https://wa.me/5581996509838?text=Olá,%20Guilherme!%20Quero%20fazer%20uma%20entrega!" target="_blank" class="whatsapp-flutuante">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150; // Distância para começar a aparecer
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    // Para rodar assim que a página carregar a primeira parte
+    reveal();
+</script>
+
+
 </body>
 </html>
