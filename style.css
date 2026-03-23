@@ -282,7 +282,7 @@ hr {
 /* Estado inicial: Invisível e um pouco abaixo da posição real */
 .reveal {
     opacity: 0;
-    transform: translateX(5px);
+    transform: translateX(15px);
     transition: all 0.8s ease-out;
 }
 
